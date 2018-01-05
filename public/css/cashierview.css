@@ -1,0 +1,32 @@
+.left-panel{
+     background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444; 
+    height: 600px;    
+}
+
+.right-panel{
+    background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444;
+    height: 600px;
+   
+}
+.panels {
+    margin: 1%;
+}
+
+.left-items {
+    background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444;
+    padding: 4%;
+    margin: 3%;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.left-items:hover {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}

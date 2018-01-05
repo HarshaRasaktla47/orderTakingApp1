@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="css/customerView.css">
+
+<div class="customerView-div">
+   
+
+    
+<div>
+   <div>
+       
+<!- This is left side div ->       
+      <div class="float-div left col-md-3">
+        <a ui-sref=".starters"><div class="left-menu-item" ng-click="starters()">Starters</div></a>
+          
+          <a ui-sref=".maincourse">
+              <div class="left-menu-item" ng-click="maincourse()">Main Course</div></a>
+          
+          <a ui-sref=".sizzlers"><div class="left-menu-item" ng-click="sizzlers()">Sizzlers</div></a>
+          
+          <a ui-sref=".bread"><div class="left-menu-item" ng-click="bread()">Bread</div></a>
+          
+          <a ui-sref=".drinks"><div class="left-menu-item" ng-click="drinks()">Drinks</div></a>
+          
+          <a ui-sref=".deserts"><div class="left-menu-item" ng-click="deserts()">Deserts</div></a>
+          
+           <a ui-sref=".entertainment"><div class="left-menu-item" ng-click="deserts()">Entertainment</div></a>
+          
+           <a ui-sref=".reviews"><div class="left-menu-item" ng-click="deserts()">Reviews</div></a>
+          
+           <a ui-sref=".signup"><div class="left-menu-item" ng-click="deserts()">Sign Up</div></a>
+          
+          <a ui-sref=".customerhistory"><div class="left-menu-item" ng-click="deserts()">View Order</div></a>
+        </div>
+       
+    <!- This is center div ->   
+        <div class="float-div center col-md-5" >
+         
+            <div ui-view></div>
+        </div>
+       
+<!- Right side Panel ->       
+        <div class="float-div right col-md-3 right-bar " init="loading=[]">
+          <h4>Your Order Summary</h4>
+            <div ng-repeat="ind in selectedStarterArray" class="selectedItem">
+            {{ind.name}} <br>
+              {{ind.Price | currency}}
+               
+                <span><button class="btn btn-danger removeItem" ng-click="removeItem($index)" ng-click="loading[$index]=true">Remove Item</button> <div class="clear"></div></span>
+                </div> 
+            <form action="/customerview/submit" method="post">
+        <div ng-show="orderSummaryPanel">Item Summary: <br>
+            <div>Total Items: {{selectedStarterArray.length}}<br>
+                 Total Cost: {{totalPrice | currency}} <br>
+                 Your Table: {{selectedTable}}
+            </div>
+            Select Table: 
+            <select class="form-control" ng-model="selectedTable" ng-options="ind for ind in tables" ng-change="setAns(selectedTable)">
+                 <option value="" disabled>Select Table</option>
+            </select><br>
+            
+            <button class="btn btn-success" ng-click="confirmOrder()" type="submit">Confirm Order</button>
+            <button class='btn btn-danger' ng-click="cancelOrder()">Cancel Order</button>
+            </div> 
+            </form>
+       </div>
+    <div class="clear"></div>
+    </div>
+</div>
+</div>

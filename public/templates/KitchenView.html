@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="css/kitchen.css" /> 
+<h1>This is kitchen view</h1>
+
+<div ng-init="updateorder()">
+
+<div class="kitchen-left  kitchen-divs col-md-8">
+    <button ng-click="table3order()">Table 3 Order</button>
+    <!-- table 1 -->
+    <div class="totalOrder col-md-3" >
+          
+    <li ng-repeat="ind in table1Order" class="orderItem ">{{ind.name}}<span><input type="checkbox" ></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 1
+          </div><br>
+    <button class="btn btn-success" ng-click="table2OrderComplete()">Order Completed</button>
+       </div>
+    
+    <!-- table 2 -->
+      <div class="totalOrder col-md-3">
+          <!-- confirmorder variable for for loop-->
+    <li ng-repeat="ind in table2Order" class="orderItem ">{{ind.name}}<span><input type="checkbox" ></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 2
+          </div><br>
+    <button class="btn btn-success" ng-click="table2OrderComplete()">Order Completed</button>
+       </div>
+    
+       <!-- table 3 -->
+      <div class="totalOrder col-md-3" ng-show="table3">
+          <!-- confirmorder variable for for loop-->
+    <li ng-repeat="ind in table3Order" class="orderItem ">{{ind.name}}<span><input type="checkbox"></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 3
+          </div><br>
+    <button class="btn btn-success" ng-click="table3OrderComplete()">Order Completed</button>
+       </div>
+    
+       <!-- table 4 -->
+     <div class="totalOrder col-md-3">
+          <!-- confirmorder variable for for loop-->
+    <li ng-repeat="ind in table4Order" class="orderItem ">{{ind.name}}<span><input type="checkbox"></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 4
+          </div><br>
+    <button class="btn btn-success" ng-click="table4OrderComplete()">Order Completed</button>
+       </div>
+    
+    <!-- table 5 -->
+     <div class="totalOrder col-md-3" ng-show="showOrder5">
+          <!-- confirmorder variable for for loop-->
+    <li ng-repeat="ind in table5Order" class="orderItem ">{{ind.name}}<span><input type="checkbox"></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 5
+          </div><br>
+    <button class="btn btn-success" ng-click="table5OrderComplete()">Order Completed</button>
+       </div>
+    
+    <!-- table 6 -->
+     <div class="totalOrder col-md-3" ng-show="showOrder6">
+          <!-- confirmorder variable for for loop-->
+    <li ng-repeat="ind in table6Order" class="orderItem ">{{ind.name}}<span><input type="checkbox"></span></li>
+      <br>
+     <div class="tableNo">
+        
+     Table: 6
+          </div><br>
+    <button class="btn btn-success" ng-click="table6OrderComplete()">Order Completed</button>
+       </div>
+    
+    </div> 
+    
+<div class="kitchen-right kitchen-divs col-md-3">Order completed
+        <div><li ng-repeat="ind in orderConfirmation">{{ind}}</li></div>
+    </div>
+    </div>

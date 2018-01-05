@@ -1,0 +1,18 @@
+.review {
+     background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444;
+    padding: 2%;
+}
+.review img {
+    width: 17%;
+    
+   
+}
+.flt {
+   float: left;
+    margin: 0 3%;
+}
+
+.clear {
+    clear: both;
+}

@@ -1,0 +1,8 @@
+<head><link rel="stylesheet" href="css/menu.css"></head>
+<div class="col-md-12"><h1>Sizzlers</h1></div>
+<div ng-repeat="ind in sizzleritems" class="col-md-3 item" ng-init="loading=[]">
+    <div ng-click="selectsizzler($index)" ng-click="loading[$index]=true">
+      {{ind.name}} <br>
+      {{ind.Price | currency}}
+        </div>
+</div>

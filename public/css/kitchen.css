@@ -1,0 +1,45 @@
+.kitchen-divs{
+    float:left;
+    margin: 2%;
+    color: white;
+}
+.kitchen-left{
+    background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444;
+    height: 600px;
+    padding: 2%;
+}
+.kitchen-right{
+   background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444; 
+    height: 600px;
+}
+.totalOrder{
+    background-color:rgba(117, 117, 117,0.5);
+    box-shadow: 3px 3px 3px #444444; 
+    padding: 2% 0;
+    border-radius: 5px;
+}
+.totalOrder button {
+    position: relative;
+    left: 35px;
+}
+
+.orderItem{
+    padding-left: 10px;
+    height: 35px;
+    list-style-type: none;
+    color: rgba(241, 196, 15,1.0);
+    font-weight: bold;
+}
+.orderItem input {
+    float: left;
+}
+.tableNo {
+    background-color: rgba(26, 188, 156,0.7);
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}

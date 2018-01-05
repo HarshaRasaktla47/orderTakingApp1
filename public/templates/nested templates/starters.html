@@ -1,0 +1,8 @@
+<!-- <div class="col-md-3 menu-item" ng-click="starters()">Starters</div> -->  
+<head><link rel="stylesheet" href="css/menu.css"></head>
+
+<div class="col-md-12"><h1>Starters</h1>
+<div class="col-md-3 item"ng-repeat="ind in menuitem" ng-init="loading=[]">
+       <div ng-click="selectitem($index)" ng-click="loading[$index]=true"> {{ind.name}}<br>Price:{{ind.Price | currency }}</div>
+    </div>
+</div>

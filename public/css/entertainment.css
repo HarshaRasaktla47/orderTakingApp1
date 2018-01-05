@@ -1,0 +1,18 @@
+
+
+.entertainment-image-div img{
+    width: 45%;
+    height: 35%;
+    margin: 0 auto;
+   
+    
+}
+.entertainment-image-div {
+    width: 45%;
+    height: 45%;
+    float: right;
+    padding: 3%;
+    margin: 2%;
+     background-color:rgba(117, 117, 117,0.5);
+      box-shadow: 2px 2px 2px #444444;
+}
